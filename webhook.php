@@ -23,35 +23,35 @@ case "555":
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
-	$_postData = "666";
+	$arrPostData['messages'][0]['text'] = "666";
 	break;
 
 case "สวัสดี":
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
-	$_postData = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
+	$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
 	break;
 
 case "ชื่ออะไร":
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
-	$_postData = "ฉันยังไม่มีชื่อนะ";
+	$arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
 	break;
 
 case "ทำอะไรได้บ้าง":
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
-	$_postData = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+	$arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 	break;
 
 default:
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
-	$_postData = "ฉันไม่เข้าใจคำสั่ง";
+	$arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
 	break;
 	}
 
