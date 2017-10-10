@@ -18,7 +18,7 @@ if ($_msg == "555")
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "666";
 	}
-	else
+  else
 if ($_msg == "สวัสดี")
 	{
 	$arrPostData = array();
