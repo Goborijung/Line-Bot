@@ -9,14 +9,18 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+
 $_msg = $arrJson['events'][0]['message']['text'];
+$reToken = $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+$type = $arrPostData['messages'][0]['type'] = "text";
+$reply = $arrPostData['messages'][0]['text'];
 
 if ($_msg == "555")
 	{
 	$arrPostData = array();
-	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-	$arrPostData['messages'][0]['type'] = "text";
-	$arrPostData['messages'][0]['text'] = "666";
+	$reToken;
+	$type;
+	$reply = "666";
 	}
   else
 if ($_msg == "สวัสดี")
