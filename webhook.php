@@ -16,7 +16,7 @@ $_replyToken = $arrJson['events'][0]['replyToken'];
 $_replyText = $arrPostData['messages'][0]['type'] = "text";
 
 switch($_msg){
-	case "555" : $arrPostData['replyToken'] = $_replyToken; $_replyText;
+	case 555 : $arrPostData['replyToken'] = $_replyToken; $_replyText;
 	$arrPostData['messages'][0]['text'] = "666";
 	break;
 
