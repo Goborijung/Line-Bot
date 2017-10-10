@@ -11,18 +11,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 $_msg = $arrJson['events'][0]['message']['text'];
-$reToken = $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-$type = $arrPostData['messages'][0]['type'] = "text";
-$reply = $arrPostData['messages'][0]['text'];
 
-if ($_msg == "555")
-	{
-	$arrPostData = array();
-	$reToken;
-	$type;
-	$reply = "666";
-	}
-  else
 if ($_msg == "สวัสดี")
 	{
 	$arrPostData = array();
@@ -30,7 +19,7 @@ if ($_msg == "สวัสดี")
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
 	}
-  else
+
 if ($_msg == "ชื่ออะไร")
 	{
 	$arrPostData = array();
@@ -38,22 +27,13 @@ if ($_msg == "ชื่ออะไร")
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
 	}
-  else
+
 if ($_msg == "ทำอะไรได้บ้าง")
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-	}
-  else
-	{
-	/*
-	$arrPostData = array();
-	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-	$arrPostData['messages'][0]['type'] = "text";
-	$arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
-	*/
 	}
 
 $ch = curl_init();
