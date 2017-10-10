@@ -40,7 +40,7 @@ switch($_msg){
 }
 
 if($_msg == "444"){
-	$arrHeader['replyToken'] = $_replyToken; $_replyText; $_postData = "555";
+	$arrHeader['replyToken'] = $_replyToken; $_replyText; $arrPostData['messages'][0]['text'] = "555";
 }
 
 $ch = curl_init();
