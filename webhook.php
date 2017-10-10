@@ -16,6 +16,7 @@ $_replyToken = $arrJson['events'][0]['replyToken'];
 $_replyText = $arrPostData['messages'][0]['type'] = "text";
 $_postData = $arrPostData['messages'][0]['text'];
 
+/*
 switch($_msg){
 	case "555" : 
 	$arrPostData['replyToken'] = $_replyToken; $_replyText; $_postData = "666";
@@ -38,6 +39,7 @@ switch($_msg){
 	$arrPostData['replyToken'] = $_replyToken; $_replyText; $_postData = "ฉันไม่เข้าใจคำสั่ง";
 	break;
 }
+*/
 
 if($_msg == "444"){
 	$arrHeader['replyToken'] = $_replyToken; $_replyText; $arrPostData['messages'][0]['text'] = "555";
