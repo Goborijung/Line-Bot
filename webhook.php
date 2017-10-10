@@ -19,7 +19,7 @@ if ($_msg == "สวัสดี")
 	$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
 	}
   else
-if ($arrJson['events'][0]['message']['text'] == "ชื่ออะไร")
+if ($_msg == "ชื่ออะไร")
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -27,7 +27,7 @@ if ($arrJson['events'][0]['message']['text'] == "ชื่ออะไร")
 	$arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
 	}
   else
-if ($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง")
+if ($_msg == "ทำอะไรได้บ้าง")
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
