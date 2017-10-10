@@ -9,20 +9,22 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-$_msg = $arrJson['events'][0]['message']['text'];
+// Text or Message Onliy
+$_msg = $arrJson['events'][0]['message']['text']; //request api
+$arrPostData = array(); //response api
+$_replyToken = $arrJson['events'][0]['replyToken'];
+$_replyText = $arrPostData['messages'][0]['type'] = "text";
 
 if ($_msg == "สวัสดี")
 	{
-	$arrPostData = array();
-	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-	$arrPostData['messages'][0]['type'] = "text";
+	$arrPostData['replyToken'] = $_replyToken; $_replyText;
 	$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
 	}
   else
 if ($_msg == "ชื่ออะไร")
 	{
 	$arrPostData = array();
-	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+	$arrPostData['replyToken'] = $_replyToken;
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
 	}
@@ -30,16 +32,18 @@ if ($_msg == "ชื่ออะไร")
 if ($_msg == "ทำอะไรได้บ้าง")
 	{
 	$arrPostData = array();
-	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+	$arrPostData['replyToken'] = $_replyToken;
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 	}
   else
 	{
+	/*
 	$arrPostData = array();
-	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+	$arrPostData['replyToken'] = $_replyToken;
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
+	*/
 	}
 
 $ch = curl_init();
