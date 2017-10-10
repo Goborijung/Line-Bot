@@ -21,7 +21,7 @@ switch($_msg){
 	$arrPostData['replyToken'] = $_replyToken; $_replyText; $_postData = "666";
 	break;
 
-	/*case "สวัสดี" :
+	case "สวัสดี" :
 	$arrPostData['replyToken'] = $_replyToken; $_replyText; $_postData = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
 	break;
 
@@ -31,10 +31,12 @@ switch($_msg){
 
 	case "ทำอะไรได้บ้าง" : 
 	$arrPostData['replyToken'] = $_replyToken; $_replyText; $_postData = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-	break;*/
+	break;
 
 
-	default: break;
+	default: 
+	$arrPostData['replyToken'] = $_replyToken; $_replyText; $_postData = "ฉันไม่เข้าใจคำสั่ง";
+	break;
 }
 
 $ch = curl_init();
