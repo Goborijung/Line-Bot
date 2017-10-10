@@ -12,6 +12,17 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 $_msg = $arrJson['events'][0]['message']['text'];
 
+function replys($req,$res)
+{
+ if ($arrJson['events'][0]['message']['text'] == $req)
+	{
+	$arrPostData = array();
+	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+	$arrPostData['messages'][0]['type'] = "text";
+	$arrPostData['messages'][0]['text'] = $res;
+	}
+}
+
 if ($_msg == "สวัสดี")
 	{
 	$arrPostData = array();
@@ -35,6 +46,8 @@ if ($_msg == "ทำอะไรได้บ้าง")
 	$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 	}
+
+replys("555","666");
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $strUrl);
