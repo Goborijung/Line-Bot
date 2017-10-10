@@ -15,6 +15,14 @@ $arrPostData = array(); //response api
 $_replyToken = $arrJson['events'][0]['replyToken'];
 $_replyText = $arrPostData['messages'][0]['type'] = "text";
 
+switch($_msg){
+	case "555" : $arrPostData['replyToken'] = $_replyToken; $_replyText;
+	$arrPostData['messages'][0]['text'] = "666";
+	break;
+
+	default: break;
+}
+
 if ($_msg == "สวัสดี")
 	{
 	$arrPostData['replyToken'] = $_replyToken; $_replyText;
