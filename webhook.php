@@ -14,12 +14,12 @@ $_msg = $arrJson['events'][0]['message']['text'];
 
 function replys($req,$res)
 {
- if ($arrJson['events'][0]['message']['text'] == $req)
+ if ($arrJson['events'][0]['message']['text'] == '$req')
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 	$arrPostData['messages'][0]['type'] = "text";
-	$arrPostData['messages'][0]['text'] = $res;
+	$arrPostData['messages'][0]['text'] = '$res';
 	}
 }
 
