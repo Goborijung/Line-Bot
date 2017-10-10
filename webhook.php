@@ -11,8 +11,9 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 if (
     $arrJson['events'][0]['message']['text'] == "ดี" || 
-    $arrJson['events'][0]['message']['text'] == "ดี" ||
-    $arrJson['events'][0]['message']['text'] = "สวัสดี"
+    $arrJson['events'][0]['message']['text'] == "ดีค่ะ" ||
+    $arrJson['events'][0]['message']['text'] = "สวัสดี" || 
+    $arrJson['events'][0]['message']['text'] = "สวัสดีคับ"
    )
 	{
 	$arrPostData = array();
