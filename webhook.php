@@ -13,37 +13,42 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 // Text or Message Onliy
 
 $_msg = $arrJson['events'][0]['message']['text']; //request api
-$arrPostData = array(); //response api
+//$arrPostData = array(); //response api
 $_replyToken = $arrJson['events'][0]['replyToken'];
 $_replyText = $arrPostData['messages'][0]['type'] = "text";
 $_postData = $arrPostData['messages'][0]['text'];
 switch ($_msg)
 	{
 case "555":
+	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
 	$_postData = "666";
 	break;
 
 case "สวัสดี":
+	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
 	$_postData = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
 	break;
 
 case "ชื่ออะไร":
+	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
 	$_postData = "ฉันยังไม่มีชื่อนะ";
 	break;
 
 case "ทำอะไรได้บ้าง":
+	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
 	$_postData = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 	break;
 
 default:
+	$arrPostData = array();
 	$arrPostData['replyToken'] = $_replyToken;
 	$_replyText;
 	$_postData = "ฉันไม่เข้าใจคำสั่ง";
