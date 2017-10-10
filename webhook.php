@@ -9,12 +9,7 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-if (
-    $arrJson['events'][0]['message']['text'] == "ดี" || 
-    $arrJson['events'][0]['message']['text'] == "ดีค่ะ" ||
-    $arrJson['events'][0]['message']['text'] = "สวัสดี" || 
-    $arrJson['events'][0]['message']['text'] = "สวัสดีคับ"
-   )
+if ($arrJson['events'][0]['message']['text'] == "ดี" || "ดีค่ะ" || "สวัสดี" || "สวัสดีคับ")
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
