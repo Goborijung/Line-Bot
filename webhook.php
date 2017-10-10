@@ -23,17 +23,15 @@ if ($_msg == "สวัสดี")
   else
 if ($_msg == "ชื่ออะไร")
 	{
-	$arrPostData = array();
-	$arrPostData['replyToken'] = $_replyToken;
-	$arrPostData['messages'][0]['type'] = "text";
+	$arrPostData['replyToken'] = $_replyToken; $_replyText;
 	$arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
 	}
   else
 if ($_msg == "ทำอะไรได้บ้าง")
 	{
-	$arrPostData = array();
-	$arrPostData['replyToken'] = $_replyToken;
-	$arrPostData['messages'][0]['type'] = "text";
+	//$arrPostData = array();
+	$arrPostData['replyToken'] = $_replyToken; $_replyText;
+	//$arrPostData['messages'][0]['type'] = "text";
 	$arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 	}
   else
