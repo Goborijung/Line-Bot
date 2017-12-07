@@ -28,6 +28,14 @@ if ($_msg == "ขอแนวข้อสอบ")
 	$arrPostData['messages'][0]['text'] = "ต้องขออภัย! ตอนนี้ยังไม่มีแนวข้อสอบนะครับผม :) ";
 	}
 
+if ($_msg == "?")
+	{
+	$arrPostData = array();
+	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+	$arrPostData['messages'][0]['type'] = "text";
+	$arrPostData['messages'][0]['text'] = "ครับผม ต้องการให้เราช่วยเหลืออะไรครับ ? <br> ??";
+	}
+
 if ($_msg == "ตารางสอบ")
 	{
 	$arrPostData = array();
