@@ -42,8 +42,8 @@ if ($_msg == "img")
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 	$arrPostData['messages'][0]['type'] = "image";
-	$arrPostData['messages'][0]['originalContentUrl'] = "https://ariomarketing.co.th/wp-content/uploads/2017/11/ariomarketingth_logo_google.png";
-	$arrPostData['messages'][0]['previewImageUrl'] = "https://ariomarketing.co.th/wp-content/uploads/2017/11/ariomarketingth_logo_google.png";
+	$arrPostData['messages'][0]['originalContentUrl'] = "https://www.picz.in.th/images/2017/12/07/dev-251x300.jpg";
+	$arrPostData['messages'][0]['previewImageUrl'] = "https://www.picz.in.th/images/2017/12/07/dev-251x300.jpg";
 	}
 
 if ($_msg == "ตารางสอบ")
