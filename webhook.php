@@ -20,7 +20,7 @@ if ($_msg == "สวัสดี")
 	$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ " . $arrJson['events'][0]['source']['userId'];
 	}
 
-if ($_msg == "แนวข้อสอบ")
+if ($_msg == "ขอแนวข้อสอบ")
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
