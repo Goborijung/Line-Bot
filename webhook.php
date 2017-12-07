@@ -41,7 +41,7 @@ if ($_msg == "img")
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-	$arrPostData['messages'][0]['type'] = "text";
+	$arrPostData['messages'][0]['type'] = "image";
 	$arrPostData['messages'][0]['image'] = "https://ariomarketing.co.th/wp-content/uploads/2017/11/ariomarketingth_logo_google.png";
 	}
 
