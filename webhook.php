@@ -28,12 +28,12 @@ if ($_msg == "ขอแนวข้อสอบ")
 	$arrPostData['messages'][0]['text'] = "ต้องขออภัย! ตอนนี้ยังไม่มีแนวข้อสอบนะครับผม :) ";
 	}
 
-if ($_msg == "ชื่ออะไร")
+if ($_msg == "ขอบคุณครับ")
 	{
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 	$arrPostData['messages'][0]['type'] = "text";
-	$arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
+	$arrPostData['messages'][0]['text'] = "ครับผม :)";
 	}
 
 if ($_msg == "ทำอะไรได้บ้าง")
