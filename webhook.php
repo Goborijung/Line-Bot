@@ -42,8 +42,8 @@ if ($_msg == "img")
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 	$arrPostData['messages'][0]['type'] = "image";
-	$arrPostData['messages'][0]['originalContentUrl'] = "https://www.picz.in.th/images/2017/12/07/dev-251x300.jpg";
-	$arrPostData['messages'][0]['previewImageUrl'] = "https://www.picz.in.th/images/2017/12/07/dev-251x300.jpg";
+	$arrPostData['messages'][0]['originalContentUrl'] = "https://www.ez-miner.com/Img/landing/nook.png";
+	$arrPostData['messages'][0]['previewImageUrl'] = "https://www.ez-miner.com/Img/landing/nook.png";
 	}
 
 if ($_msg == "ตารางสอบ")
