@@ -33,8 +33,8 @@ if ($_msg == "?")
 	$arrPostData = array();
 	$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 	$arrPostData['messages'][0]['type'] = "text";
-	$arrPostData['messages'][0]['text'] = "ครับผม ต้องการให้เราช่วยเหลืออะไรครับ ?
-	??";
+	$arrPostData['messages'][0]['text'] = "ครับผม ต้องการให้เราช่วยเหลืออะไรครับ ???";
+	$arrPostData['messages'][0]['text'] = "555++";
 	}
 
 if ($_msg == "img")
