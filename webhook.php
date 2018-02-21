@@ -10,19 +10,22 @@ if (!is_null($events['events'])) {
    $text = $event['message']['text'];
    $replyToken = $event['replyToken'];
    
-   if($event['message']['text'] = 'dd'){
+   if($text == 'dd'){
     $messages = [
       'type' => 'text',
-      'text' => str_replace($text,'ff',$text)
-    ];
+      'text' => 'dd ok'
+   ];
    }else{
     $messages = [
       'type' => 'text',
       'text' => $text
-    ];
+   ];
    }
-    
    
+   /*$messages = [
+      'type' => 'text',
+      'text' => $text
+   ];*/
    
   }
   
