@@ -12,6 +12,8 @@ if (!is_null($events['events'])) {
     'type' => 'text',
     'text' => $text
    ];
+   
+  }
 
    $url = 'https://api.line.me/v2/bot/message/reply';
    $data = [
@@ -32,7 +34,6 @@ if (!is_null($events['events'])) {
 
    echo $result . "\r\n";
   }
- }
 }
 echo "OK";
 ?>
