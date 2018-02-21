@@ -14,6 +14,17 @@ if (!is_null($events['events'])) {
    ];
    
   }
+  
+  if ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
+   $text = $event['message']['sticker'];
+   $replyToken = $event['replyToken'];
+  
+   $messages = [
+    'type' => 'sticker',
+    'sticker' => $text
+   ];
+   
+  }
 
    $url = 'https://api.line.me/v2/bot/message/reply';
    $data = [
