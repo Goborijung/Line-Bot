@@ -16,12 +16,14 @@ if (!is_null($events['events'])) {
   }
   
   if ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
-   $stickerID = $event['message']['sticker'];
+   $packageId = $event['message']['packageId'];
+   $stickerId = $event['message']['stickerId'];
    $replyToken = $event['replyToken'];
   
    $messages = [
     'type' => 'sticker',
-    'stickerId' => $stickerID
+    'packageId' => $packageId,
+    'stickerId' => $stickerId
    ];
    
   }
