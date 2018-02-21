@@ -1,22 +1,17 @@
 <?php
-$access_token = 'OyJ4nQPnUj2MIhEdFLugs9MQMDaRyNglNtwIVwJRPhqu+i1ucjxFzN2aK2T/88Bf3Xc6MAdEYeUpQGXVxTTVzLPS6yIxY/p8fAvjga33iZGAShng8Au+dTdpctQKgu1QhZ/6eogkV9D0DXfxQELgdB04t89/1O/w1cDnyilFU=';
+$access_token = 'OyJ4nQPnUj2MIhEdFLugs9MQMDaRyNglNtwIVwJRPhqu+i1ucjxFz+N2aK2T/88Bf3Xc6MAdEYeUpQGXVxTTVzLPS6yIxY/p8fAvjga33iZGAShng8Au+dTdpctQKg+u1QhZ/6eogkV9D0DXfxQELgdB04t89/1O/w1cDnyilFU=';
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 if (!is_null($events['events'])) {
  foreach ($events['events'] as $event) {
-
   if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-
    $text = $event['message']['text'];
- 
    $replyToken = $event['replyToken'];
-
   
    $messages = [
     'type' => 'text',
     'text' => $text
    ];
-
 
    $url = 'https://api.line.me/v2/bot/message/reply';
    $data = [
@@ -24,9 +19,7 @@ if (!is_null($events['events'])) {
     'messages' => [$messages],
    ];
    $post = json_encode($data);
-   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . 
-
-$access_token);
+   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
    $ch = curl_init($url);
    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -42,5 +35,4 @@ $access_token);
  }
 }
 echo "OK";
-
 ?>
