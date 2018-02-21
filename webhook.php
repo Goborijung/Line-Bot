@@ -7,19 +7,18 @@ if (!is_null($events['events'])) {
   
   //message text
   if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-   //$text = $event['message']['text'];
-   $text = '';
+   $text = $event['message']['text'];
    $replyToken = $event['replyToken'];
    
    if($event['message']['text'] = 'dd'){
     $messages = [
       'type' => 'text',
-      'text' => $text.= 'dd ok'
+      'text' => str_replace($text,'ff',$text)
     ];
    }else{
     $messages = [
       'type' => 'text',
-      'text' => $text.= $eventp['message']['text']
+      'text' => $text
     ];
    }
     
