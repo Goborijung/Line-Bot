@@ -12,7 +12,7 @@ if (!is_null($events['events'])) {
    
    if($text == '?'){
     $messages = ['type' => 'text', 'text' => 'ต้องการให้เราช่วยอะไรคับ ? '];
-    $messages = ['type' => 'text', 'text' => '\n\n 555'];
+    $messages .= '<br> \n 555'
    }else{
     $messages = ['type' => 'text', 'text' => $text];
    }
