@@ -10,23 +10,11 @@ if (!is_null($events['events'])) {
    $text = $event['message']['text'];
    $replyToken = $event['replyToken'];
    
-   if($text == 'dd'){
-    $messages = [
-      'type' => 'text',
-      'text' => 'dd ok'
-   ];
+   if($text == '?'){
+    $messages = ['type' => 'text', 'text' => 'ต้องการให้เราช่วยอะไรคับ ?'];
    }else{
-    $messages = [
-      'type' => 'text',
-      'text' => $text
-   ];
+    $messages = ['type' => 'text', 'text' => $text];
    }
-   
-   /*$messages = [
-      'type' => 'text',
-      'text' => $text
-   ];*/
-   
   }
   
   //message stricker
@@ -63,5 +51,5 @@ if (!is_null($events['events'])) {
    echo $result . "\r\n";
   }
 }
-echo "OK";
+//echo "OK";
 ?>
