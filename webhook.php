@@ -9,14 +9,14 @@ if (!is_null($events['events'])) {
    $replyToken = $event['replyToken'];
    
    if($text=='dd'){
-    $text = 'dd ok';
+    $texts = 'dd ok';
    else{
-    $text = $text;
+    $texts = $text;
    }
     
    $messages = [
      'type' => 'text',
-     'text' => $text
+     'text' => $texts
    ];
    
   }
