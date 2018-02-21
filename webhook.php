@@ -11,8 +11,7 @@ if (!is_null($events['events'])) {
    $replyToken = $event['replyToken'];
    
    if($text == '?'){
-    $messages = ['type' => 'text', 'text' => 'ต้องการให้เราช่วยอะไรคับ ? '];
-    $messages .= '<br> \n 555'
+    $messages = ['type' => 'text', 'text' => 'ต้องการให้เราช่วยอะไรคับ ? \r/r/n/n\n\n '];
    }else{
     $messages = ['type' => 'text', 'text' => $text];
    }
