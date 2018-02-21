@@ -7,16 +7,10 @@ if (!is_null($events['events'])) {
   if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
    $text = $event['message']['text'];
    $replyToken = $event['replyToken'];
-   
-   if($text=='dd'){
-    $texts = 'dd ok';
-   else{
-    $texts = $text;
-   }
     
    $messages = [
      'type' => 'text',
-     'text' => $texts
+     'text' => $text
    ];
    
   }
