@@ -10,7 +10,7 @@ if (!is_null($events['events'])) {
     
    $messages = [
      'type' => 'text',
-     'text' => 'test';
+     'text' => 1234
    ];
    
   }
