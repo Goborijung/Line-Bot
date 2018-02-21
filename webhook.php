@@ -4,17 +4,30 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 if (!is_null($events['events'])) {
  foreach ($events['events'] as $event) {
+  
+  //message text
   if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-   $text = $event['message']['text'];
+   //$text = $event['message']['text'];
+   $text = '';
    $replyToken = $event['replyToken'];
+   
+   if($event['message']['text'] = 'dd'){
+    $messages = [
+      'type' => 'text',
+      'text' => $text.= 'dd ok'
+    ];
+   }else{
+    $messages = [
+      'type' => 'text',
+      'text' => $text.= $eventp['message']['text']
+    ];
+   }
     
-   $messages = [
-     'type' => 'text',
-     'text' => 1234
-   ];
+   
    
   }
   
+  //message stricker
   if ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
    $packageId = $event['message']['packageId'];
    $stickerId = $event['message']['stickerId'];
