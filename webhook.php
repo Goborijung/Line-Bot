@@ -2,6 +2,9 @@
 $access_token = 'OyJ4nQPnUj2MIhEdFLugs9MQMDaRyNglNtwIVwJRPhqu+i1ucjxFz+N2aK2T/88Bf3Xc6MAdEYeUpQGXVxTTVzLPS6yIxY/p8fAvjga33iZGAShng8Au+dTdpctQKg+u1QhZ/6eogkV9D0DXfxQELgdB04t89/1O/w1cDnyilFU=';
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
+
+print_r($events);
+
 if (!is_null($events['events'])) {
  foreach ($events['events'] as $event) {
   
