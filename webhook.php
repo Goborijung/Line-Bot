@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
    $replyToken = $event['replyToken'];
    
    if($text == '?'){
-    $messages = ['type' => 'text', 'text' => "ต้องการให้เราช่วยอะไรคับ ?"];
+    $messages = ['type' => 'text', 'text' => 'ต้องการให้เราช่วยอะไรคับ ?'];
    }else{
     $messages = ['type' => 'text', 'text' => $text];
    }
@@ -54,5 +54,5 @@ if (!is_null($events['events'])) {
    echo $result . "\r\n";
   }
 }
-//echo "OK";
+
 ?>
