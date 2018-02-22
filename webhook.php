@@ -3,7 +3,7 @@ $access_token = 'OyJ4nQPnUj2MIhEdFLugs9MQMDaRyNglNtwIVwJRPhqu+i1ucjxFz+N2aK2T/88
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 
-print_r($events);
+$arrQuestion = {'null'};
 
 if (!is_null($events['events'])) {
  foreach ($events['events'] as $event) {
