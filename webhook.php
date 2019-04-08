@@ -1,7 +1,7 @@
 <?php
 $access_token = 'pWTpWUYdUDetDM0PJ2A7QosVJc6Thh8GiJtOYGHKueUswk9KK8NyfRGjOlgjqjv7f3Xc6MAdEYeUpQGXVxTTVzLPS6yIxY/p8fAvjga33ia8cPhhGSkvidD+2X1SdURB4Zg4pIq2oM6jtneCsNpNJAdB04t89/1O/w1cDnyilFU=';
-$content = file_get_contents('php://input');
-$events = json_decode($content, true);
+$content = file_get_contents('php://input'); //เราสร้างตัวแปรนี้ขึ้นมาเพื่อไว้สำหรับเก็บ Datas ที่เราได้รับมาจาก LINE
+$events = json_decode($content, true); //เก็บค่า Array หลังจาก Decode แล้วโดยใช้คำสั่ง json_decode
 
 $arrQuestion = {'null'};
 
